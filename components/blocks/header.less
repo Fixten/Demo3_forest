@@ -1,0 +1,16 @@
+.header {
+  width: @full-width;
+  min-height: 412px;
+  padding-top: 47px;
+  @media (max-width: @screen-md) {
+    background-image: url(../images/header-s.jpg);
+  }
+  @media (min-width: @screen-md) and (max-width: (@screen-lg - 1)){
+    background-image: url(../images/header-m.jpg);
+  }
+  @media (min-width: @screen-lg) {
+    background-image: url(../images/header-l.jpg);
+  }
+  background-repeat: no-repeat;
+  background-position: center top;
+}
