@@ -124,6 +124,10 @@
     font-size: 1.7rem;
   }
 }
+.menu-icon {
+  height: 30px;
+  width: 40px;
+}
 .menu {
   display: inline-block;
 }
@@ -150,10 +154,6 @@
     display: block;
     padding: 20px;
   }
-}
-.menu-icon {
-  height: 30px;
-  width: 40px;
 }
 .page {
   max-width: 1600px;
