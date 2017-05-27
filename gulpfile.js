@@ -8,6 +8,13 @@ var gulp = require ('gulp'),
      styles: ['styles/styles.less']
    };
 
+  gulp.task('js', function() {
+    return gulp.src('components/blocks/*.js')
+      .pipe(concat('scripts.js', {newLine: '\n'}))
+      .pipe(gulp.dest('scripts'))
+      .pipe(debug());
+  });
+
   gulp.task('build', function() {
     return gulp.src(['components/global/*.less', 'components/blocks/*.less'])
       .pipe(concat('styles.less', {newLine: '\n'}))
