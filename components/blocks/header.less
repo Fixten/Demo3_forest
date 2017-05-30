@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   overflow: hidden;
+  box-sizing: border-box;
   @media (max-width: @screen_md) {
     background-image: url(../images/header-s.jpg);
     height: 412px;
@@ -24,12 +25,38 @@
 .header__menu {
   position: absolute;
   right: 0;
+  @media (max-width: @screen_lg) {
+  position: fixed;
+  top: 97px;
+  right: 0;
+}
+  @media (max-width: @screen_md) {
+    top: 67px;
+  }
+  z-index: 1;
+}
+
+.header__menu-icon {
+  display: none;
+  @media (max-width: @screen_lg) {
+    display: block;
+    position: fixed;
+    top: 47px;
+    right: 0;
+    z-index: 1;
+  }
+  @media (max-width: @screen_md) {
+    top: 10px;
+  }
+}
+
+.header__menu-icon:active {
+  opacity: 0.6;
 }
 
 .header__heading-1 {
   min-width: 250px;
   max-width: 960px;
-  margin: 0;
   margin-top: @header__height_sm * 0.1;
   @media (min-width: @screen_md) {
     font-size: 3rem;

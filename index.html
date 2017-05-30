@@ -9,33 +9,89 @@
 
 <body class="page">
 
-  <header class="header">
-    <div class="container">
-      <span class="logo">forest</span>
-      <a class="link link_menu-icon" href="#">
-        <svg class="menu-icon">
-          <line x1="0" y1="5" x2="35" y2="5" stroke="white" stroke-width="2" />
-          <line x1="0" y1="15" x2="35" y2="15" stroke="white" stroke-width="2" />
-          <line x1="0" y1="25" x2="35" y2="25" stroke="white" stroke-width="2" />
-        </svg>
-      </a>
-      <nav class="menu header__menu">
-        <ul class="list">
-          <li class="menu__item"><a class="link" href="#home">home</a></li>
-          <li class="menu__item"><a class="link" href="#blog">blog</a></li>
-          <li class="menu__item"><a class="link" href="#our-services">our services</a></li>
-          <li class="menu__item"><a class="link" href="#team">team</a></li>
-          <li class="menu__item"><a class="link" href="#contact">contact</a></li>
-        </ul>
-      </nav>
-      <h1 class="heading-1 header__heading-1">Lorem ipsum dolor sit amet.</h1>
-      <p class="paragraph header__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<header class="header">
+  <div class="container">
+    <span class="logo">forest</span>
+    <a class="header__menu-icon">
+      <svg class="menu-icon">
+        <line x1="0" y1="5" x2="35" y2="5" />
+        <line x1="0" y1="15" x2="35" y2="15" />
+        <line x1="0" y1="25" x2="35" y2="25" />
+      </svg>
+    </a>
+    <nav class="menu header__menu">
+      <ul class="list">
+        <li class="menu__item"><a class="link" href="#blog">blog</a></li>
+        <li class="menu__item"><a class="link" href="#our-services">our services</a></li>
+        <li class="menu__item"><a class="link" href="#team">team</a></li>
+        <li class="menu__item"><a class="link" href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <h1 class="heading-1 header__heading-1">Lorem ipsum dolor sit amet.</h1>
+    <p class="paragraph header__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  </div>
+</header>
+
+<main class="main-content">
+
+  <section class="blog"><a name="blog"></a>
+    <div class="container container_flex">
+      <div class="blog-post">
+        <picture class="blog-post__picture">
+          <source media="(max-width: 400px)" srcset="images/blog-post-1-sm.jpg" />
+          <img alt="Blog post" src="images/blog-post-1-lg.jpg" />
+        </picture>
+        <div class="blog-post__content">
+          <h2 class="heading-2 blog-post__heading"><a class="link">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+          <span class="paragraph blog-post_text-data blog-post__text-data_date">24 April 2017</span>
+          <span class="paragraph blog-post_text-data blog-post__text-data_comments">comments (13 783)</span>
+        </div>
+      </div>
+      <div class="blog-post">
+        <picture class="blog-post">
+          <source media="(max-width: 400px)" srcset="images/blog-post-2-sm.jpg" />
+          <img alt="Blog post" src="images/blog-post-2-lg.jpg" />
+        </picture>
+        <div class="blog-post__content">
+          <h2 class="heading-2 blog-post__heading"><a class="link">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+          <span class="paragraph blog-post_text-data blog-post__text-data_date">24 April 2017</span>
+          <span class="paragraph blog-post_text-data blog-post__text-data_comments">comments (13 783)</span>
+        </div>
+      </div>
+      <div class="blog-post">
+        <picture class="blog-post">
+          <source media="(max-width: 400px)" srcset="images/blog-post-3-sm.jpg" />
+          <img alt="Blog post" src="images/blog-post-3-lg.jpg" />
+        </picture>
+        <div class="blog-post__content">
+          <h2 class="heading-2 blog-post__heading"><a class="link">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+          <span class="paragraph blog-post_text-data blog-post__text-data_date">24 April 2017</span>
+          <span class="paragraph blog-post_text-data blog-post__text-data_comments">comments (13 783)</span>
+        </div>
+        </div>
+      <div class="blog-post">
+        <picture class="blog-post">
+          <source media="(max-width: 400px)" srcset="images/blog-post-4-sm.jpg" />
+          <img alt="Blog post" src="images/blog-post-4-lg.jpg" />
+        </picture>
+        <div class="blog-post__content">
+          <h2 class="heading-2 blog-post__heading"><a class="link">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+          <span class="paragraph blog-post_text-data blog-post__text-data_date">24 April 2017</span>
+          <span class="paragraph blog-post_text-data blog-post__text-data_comments">comments (13 783)</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
+
+</main>
 
 <script src="scripts/scripts.js"></script>
 </body>
