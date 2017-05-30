@@ -39,17 +39,21 @@
   .heading (1.4rem);
 }
 
+.heading-3 {
+  .heading(1rem);
+}
+
 .link {
   color: white;
   text-decoration: none;
-}
 
-.link:hover {
-  text-decoration: underline;
-}
+  &:hover {
+    text-decoration: underline;
+  }
 
-.link:active {
-  opacity: 0.6;
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .list {
@@ -92,71 +96,77 @@
 
 @grey: rgb(190, 190, 190);
 @grey-menu: rgba(70, 70, 70, 0.8);
+@service-item-heading: #324953;
+@service-item__text: #72848c;
 
 .blog-post {
     position: relative;
     .center();
     margin-bottom: 19px;
-}
 
-.blog-post__content {
-  position: absolute;
-  top: 185px;
-  left: 27px;
-  margin-right: 135px;
-  @media (max-width: @screen_md) {
-    top: 50%;
-    left: 5px;
-    margin-right: 0;
+  &__content {
+    position: absolute;
+    top: 185px;
+    left: 27px;
+    margin-right: 135px;
+    @media (max-width: @screen_md) {
+      top: 50%;
+      left: 5px;
+      margin-right: 0;
+    }
+    color: white;
   }
-  color: white;
-}
 
-.blog-post__heading {
-  margin-bottom: 10px;
-  max-width: 80vw;
-  @media (max-width: @screen_md) {
-    font-size: 1.2rem;
-  }
-}
-
-.blog-post_text-data {
-  position: relative;
-  margin-left: 25px;
-  margin-right: 25px;
-  @media (max-width: @screen_md) {
+  &__heading {
     margin-bottom: 10px;
-    display: block;
+    max-width: 80vw;
+    @media (max-width: @screen_md) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &_text-data {
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    @media (max-width: @screen_md) {
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+
+  &__text-data_comments {
+    text-transform: uppercase;
+  }
+
+  &__text-data_date::before {
+    position: absolute;
+    left: -23px;
+    content: url(../images/blog-post__text-data_date.png);
+  }
+
+  &__text-data_comments::before {
+    position: absolute;
+    left: -23px;
+    content: url(../images/blog-post__text-data_comments.png);
   }
 }
 
-.blog-post__text-data_comments {
-  text-transform: uppercase;
-}
-
-.blog-post__text-data_date::before {
-  position: absolute;
-  left: -23px;
-  content: url(../images/blog-post__text-data_date.png);
-}
-
-.blog-post__text-data_comments::before {
-  position: absolute;
-  left: -23px;
-  content: url(../images/blog-post__text-data_comments.png);
+.blog {
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .container {
   max-width: @container;
   .center();
   position: relative;
-}
 
-.container_flex {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  &_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .header {
@@ -181,56 +191,56 @@
     background-image: url(../images/header-l.jpg);
     height: 718px;
   }
-}
 
-.header__menu {
-  position: absolute;
-  right: 0;
-  @media (max-width: @screen_lg) {
-  position: fixed;
-  top: 97px;
-  right: 0;
-}
-  @media (max-width: @screen_md) {
-    top: 67px;
-  }
-  z-index: 1;
-}
-
-.header__menu-icon {
-  display: none;
-  @media (max-width: @screen_lg) {
-    display: block;
-    position: fixed;
-    top: 47px;
+  &__menu {
+    position: absolute;
     right: 0;
-    z-index: 1;
+    @media (max-width: @screen_lg) {
+      position: fixed;
+      top: 97px;
+      right: 0;
+    }
+    @media (max-width: @screen_md) {
+      top: 67px;
+      }
+      z-index: 1;
   }
-  @media (max-width: @screen_md) {
-    top: 10px;
-  }
-}
 
-.header__menu-icon:active {
-  opacity: 0.6;
-}
-
-.header__heading-1 {
-  min-width: 250px;
-  max-width: 960px;
-  margin-top: @header__height_sm * 0.1;
-  @media (min-width: @screen_md) {
-    font-size: 3rem;
-    margin-top: @header__height_md * 0.15;
+  &__menu-icon {
+    display: none;
+    @media (max-width: @screen_lg) {
+      display: block;
+      position: fixed;
+      top: 47px;
+      right: 0;
+      z-index: 1;
+    }
+    @media (max-width: @screen_md) {
+      top: 10px;
+    }
   }
-  @media (min-width: @screen_lg) {
-    margin-top: @header__height_lg * 0.25;
-  }
-}
 
-.header__paragraph {
-  min-width: 250px;
-  max-width: 960px;
+  &__menu-icon:active {
+    opacity: 0.6;
+  }
+
+  &__heading {
+    min-width: 250px;
+    max-width: 960px;
+    margin-top: @header__height_sm * 0.1;
+    @media (min-width: @screen_md) {
+      font-size: 3rem;
+      margin-top: @header__height_md * 0.15;
+    }
+    @media (min-width: @screen_lg) {
+      margin-top: @header__height_lg * 0.25;
+    }
+  }
+
+  &__paragraph {
+    min-width: 250px;
+    max-width: 960px;
+  }
 }
 
 .logo {
@@ -244,8 +254,8 @@
 }
 
 .menu-icon {
-  height: 30px;
-  width: 40px;
+  height: 48px;
+  width: 48px;
   stroke: @grey;
   stroke-width: 2;
 }
@@ -258,20 +268,31 @@
     background-color: @grey-menu;
     padding-right: 20px;
   }
+
+  &_open {
+    transform: translateX(0px);
+  }
+
+  &__item {
+    display: inline-block;
+    font-family: lato, sans-serif;
+    text-transform: uppercase;
+    margin-left: 37px;
+    @media (max-width: @screen_lg) {
+      display: block;
+      padding: 20px;
+    }
+  }
 }
 
-.menu_open {
-  transform: translateX(0px);
-}
+.our-services {
+  color: black;
+  margin-bottom: 20px;
 
-.menu__item {
-  display: inline-block;
-  font-family: lato, sans-serif;
-  text-transform: uppercase;
-  margin-left: 37px;
-  @media (max-width: @screen_lg) {
-    display: block;
-    padding: 20px;
+  &__heading {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 75px;
   }
 }
 
@@ -282,4 +303,36 @@
   .center();
   padding: 0;
   font-size: 16px;
+}
+
+.service-item {
+  max-width: 200px;
+  margin-left: 70px;
+  position: relative;
+  padding-bottom: 55px;
+  &__heading {
+    color: @service-item-heading;
+  }
+  &__text {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: @service-item__text;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
+  &_desktop::before {
+    content: url(../images/our-services__desktop.png);
+  }
+  &_time::before {
+    content: url(../images/our-services__time.png);
+  }
+  &_mobile::before {
+    content: url(../images/our-services__mobile.png);
+  }
+  &_network::before {
+    content: url(../images/our-services__network.png);
+  }
 }

@@ -36,6 +36,13 @@
   font-size: 1.4rem;
   margin: 0;
 }
+.heading-3 {
+  font-family: pt_sans, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 0;
+}
 .link {
   color: white;
   text-decoration: none;
@@ -112,6 +119,10 @@
   left: -23px;
   content: url(../images/blog-post__text-data_comments.png);
 }
+.blog {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
 .container {
   max-width: 1173px;
   margin-left: auto;
@@ -121,8 +132,7 @@
 .container_flex {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  justify-content: space-between;
 }
 .header {
   width: 100%;
@@ -190,19 +200,19 @@
 .header__menu-icon:active {
   opacity: 0.6;
 }
-.header__heading-1 {
+.header__heading {
   min-width: 250px;
   max-width: 960px;
   margin-top: 41.2px;
 }
 @media (min-width: 401px) {
-  .header__heading-1 {
+  .header__heading {
     font-size: 3rem;
     margin-top: 67.35px;
   }
 }
 @media (min-width: 1001px) {
-  .header__heading-1 {
+  .header__heading {
     margin-top: 179.5px;
   }
 }
@@ -222,8 +232,8 @@
   }
 }
 .menu-icon {
-  height: 30px;
-  width: 40px;
+  height: 48px;
+  width: 48px;
   stroke: #bebebe;
   stroke-width: 2;
 }
@@ -253,6 +263,15 @@
     padding: 20px;
   }
 }
+.our-services {
+  color: black;
+  margin-bottom: 20px;
+}
+.our-services__heading {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 75px;
+}
 .page {
   max-width: 1600px;
   background-color: white;
@@ -261,4 +280,35 @@
   margin-right: auto;
   padding: 0;
   font-size: 16px;
+}
+.service-item {
+  max-width: 200px;
+  margin-left: 70px;
+  position: relative;
+  padding-bottom: 55px;
+}
+.service-item__heading {
+  color: #324953;
+}
+.service-item__text {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #72848c;
+}
+.service-item::before {
+  position: absolute;
+  top: 0;
+  left: -50px;
+}
+.service-item_desktop::before {
+  content: url(../images/our-services__desktop.png);
+}
+.service-item_time::before {
+  content: url(../images/our-services__time.png);
+}
+.service-item_mobile::before {
+  content: url(../images/our-services__mobile.png);
+}
+.service-item_network::before {
+  content: url(../images/our-services__network.png);
 }

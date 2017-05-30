@@ -1,0 +1,31 @@
+.service-item {
+  max-width: 200px;
+  margin-left: 70px;
+  position: relative;
+  padding-bottom: 55px;
+  &__heading {
+    color: @service-item-heading;
+  }
+  &__text {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: @service-item__text;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
+  &_desktop::before {
+    content: url(../images/our-services__desktop.png);
+  }
+  &_time::before {
+    content: url(../images/our-services__time.png);
+  }
+  &_mobile::before {
+    content: url(../images/our-services__mobile.png);
+  }
+  &_network::before {
+    content: url(../images/our-services__network.png);
+  }
+}

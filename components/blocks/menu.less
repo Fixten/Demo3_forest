@@ -6,19 +6,19 @@
     background-color: @grey-menu;
     padding-right: 20px;
   }
-}
 
-.menu_open {
-  transform: translateX(0px);
-}
+  &_open {
+    transform: translateX(0px);
+  }
 
-.menu__item {
-  display: inline-block;
-  font-family: lato, sans-serif;
-  text-transform: uppercase;
-  margin-left: 37px;
-  @media (max-width: @screen_lg) {
-    display: block;
-    padding: 20px;
+  &__item {
+    display: inline-block;
+    font-family: lato, sans-serif;
+    text-transform: uppercase;
+    margin-left: 37px;
+    @media (max-width: @screen_lg) {
+      display: block;
+      padding: 20px;
+    }
   }
 }
