@@ -1,0 +1,23 @@
+.work {
+  position: relative;
+  width: 400px;
+  height: 298px;
+  .center();
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.work {
+  &__image{
+    width: 400px;
+    height: 298px;
+  }
+  &:hover {
+    .work__image{
+      filter: brightness(0.3);
+    }
+    .share {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.team-member {
+  max-width: 330px;
+  text-align: center;
+  margin-bottom: 135px;
+  .center();
+  &__picture {
+    width: 213px;
+    height: 213px;
+    .center();
+    margin-bottom: 40px;
+    position: relative;
+    &:hover {
+      .team-member__photo {
+        filter: brightness(0.3);
+      }
+      .team-member__social {
+          display: block;
+        }
+      }
+    }
+    &__photo {
+      border-radius: 50%;
+    }
+}
+
+.team-member__social {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 213px;
+  height: 213px;
+  display: none;
+}
+
+.team-member__social-fb {
+  position: absolute;
+  left: 40px;
+  bottom: 45px;
+}
+
+.team-member__social-tw {
+  position: absolute;
+  left: 90px;
+  bottom: 30px;
+}
+
+.team-member__social-ig {
+  position: absolute;
+  right: 40px;
+  bottom: 45px;
+}
